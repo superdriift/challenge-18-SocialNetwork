@@ -10,7 +10,7 @@ const userController = {
         });
     },
     getSingleUser(req, res) {
-        User.find(_id: req.params.userid)
+        User.find({ _id: req.params.userid })
         .select('-__v')
         .populate('friends')
         .populate('thoughts')
